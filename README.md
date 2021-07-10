@@ -29,7 +29,7 @@ Building a Function generator proven to be quite a complex task , from the symme
 #Schematics 
 
 * Front end : 
-    ![frontEnd](/IMG/Front End.png)
+    ![frontEnd](https://github.com/finos2/Arduino-Function-Generator/blob/main/IMG/Front%20End.png?raw=true)
 
 
 * offset correction , signal offset &final amplification opamp stages (front end SCH) 
