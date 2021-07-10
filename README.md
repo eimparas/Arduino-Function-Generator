@@ -28,7 +28,7 @@ Building a Function generator proven to be quite a complex task , from the symme
 
 #Schematics 
 
-    *Front end : 
+* Front end : 
     ![frontEnd](/IMG/Front End.png)
 
 
