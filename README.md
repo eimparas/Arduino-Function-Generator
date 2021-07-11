@@ -26,7 +26,7 @@ The target future set will be the following
 # Current progress of the project. 
 Building a Function generator proven to be quite a complex task , from the symmetrical psu needed to power the operational amplifiers to the voltage references used  to “normalize” the AD9833`s output that has a +300mV offset plus the lack of free time to debug hardware on the breadboard lead to the project be left aside . the following items are what is being found working at some point . 
 
-#Schematics 
+# Schematics 
 
 * Front end : 
     ![frontEnd](https://github.com/finos2/Arduino-Function-Generator/blob/main/IMG/Front%20End.png?raw=true)
