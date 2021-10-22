@@ -27,19 +27,25 @@ The target future set will be the following
 Building a Function generator proven to be quite a complex task , from the symmetrical psu needed to power the operational amplifiers to the voltage references used  to “normalize” the AD9833`s output that has a +300mV offset plus the lack of free time to debug hardware on the breadboard lead to the project be left aside . the following items are what is being found working at some point . 
 
 # Schematics 
-
+* Power supplies
+    *Dual power supply without center tap transformer (not recommended ,it does not have full bridge rectifier)
+    ![NoCenterTapTrafo](https://github.com/finos2/Arduino-Function-Generator/blob/main/IMG/Symetrical%20Power.png?raw=true)
+    *Dual power supply with center tap transformer (recommended but more expencive)
+    ![CenterTapTrafo](https://github.com/finos2/Arduino-Function-Generator/blob/main/IMG/Symetrical%20Power%20V2.png?raw=true)
 * Front end : 
     ![frontEnd](https://github.com/finos2/Arduino-Function-Generator/blob/main/IMG/Front%20End.png?raw=true)
 
-
-* offset correction , signal offset &final amplification opamp stages (front end SCH) 
 * offset control 
+![offset](https://github.com/finos2/Arduino-Function-Generator/blob/main/IMG/Offset%20Dac.png?raw=true)
 * UI design 
 #  Explanation of different op amp stages 
 
-* offset correction 
-The AD9833 as mentioned previously outputs a “bad” signal containing a +300mV offset , while outputting sine,  triangle and square waves , and this is quite undesirable. So to rectify this I used a voltage Summing circuit , to add -300mv so the signal will be back to “normal” , or how I want it to be output . the opamp there (NE5532), being part of the circuit , serves as a voltage follower . 
+* Offset correction 
+The AD9833 as mentioned previously outputs a “bad” signal containing a +300mV DC offset , while outputting sine and triangle waves and this is quite undesirable. So to rectify this I used a voltage Summing circuit , to add -300mv so the signal will be back to “normal” AC , or how I want it to be output . the opamp there (NE5532) U10.1 , being part of the circuit , serves as a voltage follower . 
 […..] 
+* Output amplification
+    i wanted my generator to have a 10Vpp output , and the digital potentiometer (MCP41HV51) U8 cannot handle it , so up to this op-amp i have a "low" voltage then i boost it to the desired level.
+
 
 
 ## Status
